@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column full-with">
         <h1>Filters & Mixings</h1>
-        <p>{{ text | toUppercase }}</p>
+        <p>{{ text | toUppercase | toLowercase }}</p>
       </div>
     </div>
   </div>
