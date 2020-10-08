@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="columns">
-      <div class="column full-with">
+      <div class="column is-full">
         <h1>Filters & Mixings</h1>
         <p>{{ text | toUppercase | toLowercase }}</p>
         <hr />
@@ -9,12 +9,15 @@
         <ul>
           <li v-for="fruit in filteredFruits" :key="fruit">{{ fruit }}</li>
         </ul>
+        <hr />
+        <app-list></app-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import List from './List'
 export default {
   data () {
     return {
@@ -34,17 +37,11 @@ export default {
         return element.match(this.filterText)
       })
     }
+  },
+  components: {
+    appList: List
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
