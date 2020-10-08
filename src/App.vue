@@ -1,17 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="columns">
+      <div class="column full-with">
+        <h1>Filters & Mixings</h1>
+        <p>{{ text | toUppercase }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      text: 'Hello there!'
+    }
+  },
+  filters: {
+    toUppercase (value) {
+      return value.toUpperCase()
+    }
   }
 }
 </script>
