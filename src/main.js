@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-// require('@/assets/main.scss')
+// import './assets/sass/main.scss'
+require('@/assets/sass/main.scss')
 
 Vue.config.productionTip = false
 Vue.filter('toLowercase', function (value) {

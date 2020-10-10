@@ -1,11 +1,14 @@
 <template>
   <div class="column is-full">
-    <h1>Filters & Mixings</h1>
+    <h1 class="is-size-1">Filters & Mixings</h1>
     <hr />
-    <input type="text" v-model="filterText" />
-    <ul>
-      <li v-for="fruit in filteredFruits" :key="fruit">{{ fruit }}</li>
-    </ul>
+    <input class="input" type="text" v-model="filterText" />
+
+    <div class="content">
+      <ul>
+        <li v-for="fruit in filteredFruits" :key="fruit">{{ fruit }}</li>
+      </ul>
+    </div>
   </div>
 </template>
 

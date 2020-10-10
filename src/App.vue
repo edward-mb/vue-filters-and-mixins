@@ -2,13 +2,24 @@
   <div class="container">
     <div class="columns">
       <div class="column is-full">
-        <h1>Filters & Mixings</h1>
+        <h1 class="is-size-1">Filters & Mixings</h1>
         <p>{{ text | toUppercase | toLowercase }}</p>
         <hr />
-        <input type="text" v-model="filterText" />
-        <ul>
-          <li v-for="fruit in filteredFruits" :key="fruit">{{ fruit }}</li>
-        </ul>
+        <div class="field">
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              v-model="filterText"
+              placeholder="Filter"
+            />
+          </div>
+        </div>
+        <div class="content">
+          <ul>
+            <li v-for="fruit in filteredFruits" :key="fruit">{{ fruit }}</li>
+          </ul>
+        </div>
         <hr />
         <app-list></app-list>
       </div>
