@@ -28,8 +28,11 @@
 </template>
 
 <script>
+import { fruitMixing } from './fruitMixing'
 import List from './List'
+
 export default {
+  mixins: [fruitMixing],
   data () {
     return {
       text: 'Hello there!',
@@ -40,13 +43,6 @@ export default {
   filters: {
     toUppercase (value) {
       return value.toUpperCase()
-    }
-  },
-  computed: {
-    filteredFruits () {
-      return this.fruits.filter(element => {
-        return element.match(this.filterText)
-      })
     }
   },
   components: {
