@@ -17,7 +17,7 @@ import { fruitMixing } from './fruitMixing'
 export default {
   mixins: [fruitMixing],
   created () {
-    console.log('Inside List Created')
+    console.log('Inside List Created Hook')
   }
 }
 </script>
