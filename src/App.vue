@@ -5,6 +5,7 @@
         <h1 class="is-size-1">Filters & Mixings</h1>
         <p>{{ text | toUppercase | toLowercase }}</p>
         <hr />
+        <button @click="fruits.push('Berries')">Add New Item</button>
         <div class="field">
           <div class="control">
             <input
